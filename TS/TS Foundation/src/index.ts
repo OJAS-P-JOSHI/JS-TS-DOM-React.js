@@ -1,10 +1,19 @@
-// src/index.ts
-function addNumbers(a: number, b: number): number {
-    return a + b;
-  }
-  
-  const num1 = 5;
-  const num2 = 10;
-  
-  console.log(`The sum of ${num1} and ${num2} is:`, addNumbers(num1, num2));
-  
+interface Person {
+    name: string;
+    age: number;
+    greet(phrase: string): void;
+}
+
+class Employee implements Person {
+    name: string;
+    age: number;
+
+    constructor(n: string, a: number) {
+        this.name = n;
+        this.age = a;
+    }
+
+    greet(phrase: string) {
+        console.log(`${phrase} ${this.name}`);
+    }
+}
