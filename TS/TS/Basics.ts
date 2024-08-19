@@ -1,4 +1,10 @@
-const x: number = 1; // Explicitly typed as a number
-const y = 2;         // TypeScript infers the type as number
+function isLegal(age: number): boolean {
+    if (age >= 18) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
-console.log(x, y);   // Outputs: 1 2
+const x2 = isLegal(55);
+console.log(x2); // Outputs: "Legal"
