@@ -1,7 +1,7 @@
 interface Person {
     name: string;
     age: number;
-    greet(phrase: string): void;
+    greet(phrase: string): void; //greet function will take phrase as argument and return nothing
 }
 
 class Employee implements Person {
@@ -14,6 +14,9 @@ class Employee implements Person {
     }
 
     greet(phrase: string) {
-        console.log(`${phrase} ${this.name}`);
+        console.log(`${phrase} ${this.age+"  "+1}`);
     }
 }
+
+const i = new Employee("KING",34);
+console.log(i.greet(`${i.name}`));
